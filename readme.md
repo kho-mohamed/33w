@@ -1,7 +1,7 @@
-# TP1 : site de voyage
+# TP1 - Site de voyage
 
 ### Première étape du développement d'un thème WP
 
-#### Auteur : Mohamed KHOUDOU
+#### Auteur : Eddy Martin
 
-#### Adresse de la github-page:
+#### Adresse de la github-page

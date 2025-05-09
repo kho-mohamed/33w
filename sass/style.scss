@@ -1,5 +1,5 @@
 /*
-Theme Name: Thème 33W
+Theme Name: thème-33w-été25
 Theme URI: https://referenced.ca
 Author: Eddy Martin
 Author URI: https://github.com/eddytuto
@@ -12,19 +12,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: club-voyage
 */
 
-/* 
-Importation des feuilles de style du thème */
+/* Importation des  feuilles de style du thème */
 
-//variables:
-// @import "variables/couleurs";
+/* variables */
+// @import "variable/couleurs";
 
-// Base
-// @import "base/titre";
+/* Base */
+@import "base/h1";
 
-// layout:
-// @import "layout/entete";
+/* Layout */
 @import "layout/general";
+@import "layout/entete";
+@import "layout/hero";
 
-//composants:
+/* ///////////////////////////////////  composants */
+@import "composants/recherche";
 // @import "composants/bouton";
 // @import "composants/menu";
