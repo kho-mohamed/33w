@@ -67,7 +67,26 @@ body {
   height: 75px;
 }
 .entete__nav {
-  margin: 0 0 0 auto;
+  margin: 0 2rem 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+@media screen and (max-width: 600px) {
+  .entete__nav {
+    display: none;
+  }
+}
+.entete__burger {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .entete__burger {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 .entete__menu {
   display: flex;
@@ -80,6 +99,18 @@ body {
 }
 .entete__menu-item a:hover {
   background-color: rgb(219, 219, 159);
+}
+
+.chk__menu {
+  display: none;
+}
+
+.chk__menu:checked ~ .entete__nav {
+  display: flex;
+  flex-direction: column;
+}
+.chk__menu:checked ~ .entete__nav .entete__menu {
+  flex-direction: column;
 }
 
 .hero {
