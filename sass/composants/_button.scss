@@ -1,0 +1,11 @@
+.button {
+  display: block;
+  color: $couleur_police_texte;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: $couleur_tertiaire;
+  width: fit-content;
+  font-weight: 600;
+  font-size: $police_moyen;
+}

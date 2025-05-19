@@ -1,11 +1,15 @@
 /* //////////////////////////layout .entete
 */
 .entete {
-  background-color: blanchedalmond;
+  background-color: $couleur_primaire;
 
   &__contenu {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+  &__toggle-icon {
+    display: none;
   }
   &__logo {
     width: 75px;
@@ -13,22 +17,7 @@
   }
   /* ///////////////////navigation  */
   &__nav {
-    margin: 0 2rem 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    @media screen and (max-width: $point-rupture) {
-      display: none;
-    }
-  }
-  &__burger {
-    display: none;
-    @media screen and (max-width: $point-rupture) {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+    margin: 0 0 0 auto;
   }
   &__menu {
     //ul
@@ -38,24 +27,48 @@
   }
   &__menu-item {
     //li
+    padding: 3px;
+    border-radius: 5px;
     a {
+      text-decoration: none;
+      color: $couleur_police_texte;
       display: block;
-      background-color: beige;
+      padding: 3px;
+      border-radius: 5px;
       &:hover {
-        background-color: rgb(219, 219, 159);
+        background-color: $couleur_secondaire;
       }
     }
   }
-}
-.chk__menu{
-  display: none;
-}
-.chk__menu:checked ~ .entete__nav {
-  display: flex;
-  flex-direction: column;
-  .entete__menu{
-    flex-direction: column;
+  // Responsivité en dessous de 800px
 
+  @media (max-width: 800px) {
+    &__contenu {
+      align-items: start;
+    }
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      width: 100%;
+    }
+    &__menu {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+
+    &__toggle-icon {
+      display: inline-block;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 30px;
+    }
+    .entete_toggle:checked + .entete__toggle-icon + .entete__menu {
+      display: flex;
+    }
   }
-
 }
