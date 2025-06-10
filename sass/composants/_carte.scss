@@ -1,0 +1,12 @@
+.conteneur {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  &__carte {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    flex: 1 0 300px;
+    padding: 10px;
+  }
+}

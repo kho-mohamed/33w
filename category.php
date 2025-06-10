@@ -1,7 +1,7 @@
-<?php 
-// Modèle index.php permet d'afficher le modèle par defaut.
+<?php
+// Modèle catégorie.php permet d'afficher 
 get_header(); ?>
-<h1>---index.php</h1>
+<h1>---catégorie.php</h1>
 <main>
 
   <section class="populaire">

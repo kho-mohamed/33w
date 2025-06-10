@@ -1,9 +1,8 @@
 @charset "UTF-8";
 /*
 Theme Name: thème-33w-été25
-Theme URI: https://referenced.ca
-Author: Eddy Martin
-Author URI: https://github.com/eddytuto
+Author: Khoudou mohamed
+Author URI: https://kho-mohamed.github.io/33w/
 Description: Thème de base développer dans le cadre du cours de Worpress
 Version: 1.0
 Tested up to: 6.2
@@ -55,10 +54,9 @@ body {
 }
 
 .global {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -266,4 +264,17 @@ body {
   width: fit-content;
   font-weight: 600;
   font-size: 1.2rem;
+}
+
+.conteneur {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.conteneur__carte {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  flex: 1 0 300px;
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */
