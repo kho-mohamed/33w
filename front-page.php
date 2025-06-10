@@ -47,29 +47,29 @@ get_header(); ?>
       </div>
     </form>
   </section>
-    <h2 class="galerie__title">Découvrez nos meilleures destinations</h2>
-    <div class="galerie__content">
-      <picture class="galerie__picture"><img src="images/galerie/galerie (1).jpg" alt="1" class="galerie__img" />
-      </picture>
-      <picture class="galerie__picture"><img src="images/galerie/galerie (2).jpg" alt="2" class="galerie__img" />
-      </picture>
-      <picture class="galerie__picture"><img src="images/galerie/galerie (3).jpg" alt="3" class="galerie__img" />
-      </picture>
-      <picture class="galerie__picture"><img src="images/galerie/galerie (4).jpg" alt="4" class="galerie__img" />
-      </picture>
-      <picture class="galerie__picture"><img src="images/galerie/galerie (5).jpg" alt="5" class="galerie__img" />
-      </picture>
-      <picture class="galerie__picture"><img src="images/galerie/galerie (6).jpg" alt="6" class="galerie__img" />
-      </picture>
-      <picture class="galerie__picture"><img src="images/galerie/galerie (7).jpg" alt="7" class="galerie__img" />
-      </picture>
-      <picture class="galerie__picture"><img src="images/galerie/galerie (8).jpg" alt="8" class="galerie__img" />
-      </picture>
-      <picture class="galerie__picture"><img src="images/galerie/galerie (9).jpg" alt="9" class="galerie__img" />
-      </picture>
-      <picture class="galerie__picture"><img src="images/galerie/galerie (10).jpg" alt="10" class="galerie__img" />
-      </picture>
-    </div>
+  <h2 class="galerie__title">Découvrez nos meilleures destinations</h2>
+  <div class="galerie__content">
+    <picture class="galerie__picture"><img src="images/galerie/galerie (1).jpg" alt="1" class="galerie__img" />
+    </picture>
+    <picture class="galerie__picture"><img src="images/galerie/galerie (2).jpg" alt="2" class="galerie__img" />
+    </picture>
+    <picture class="galerie__picture"><img src="images/galerie/galerie (3).jpg" alt="3" class="galerie__img" />
+    </picture>
+    <picture class="galerie__picture"><img src="images/galerie/galerie (4).jpg" alt="4" class="galerie__img" />
+    </picture>
+    <picture class="galerie__picture"><img src="images/galerie/galerie (5).jpg" alt="5" class="galerie__img" />
+    </picture>
+    <picture class="galerie__picture"><img src="images/galerie/galerie (6).jpg" alt="6" class="galerie__img" />
+    </picture>
+    <picture class="galerie__picture"><img src="images/galerie/galerie (7).jpg" alt="7" class="galerie__img" />
+    </picture>
+    <picture class="galerie__picture"><img src="images/galerie/galerie (8).jpg" alt="8" class="galerie__img" />
+    </picture>
+    <picture class="galerie__picture"><img src="images/galerie/galerie (9).jpg" alt="9" class="galerie__img" />
+    </picture>
+    <picture class="galerie__picture"><img src="images/galerie/galerie (10).jpg" alt="10" class="galerie__img" />
+    </picture>
+  </div>
   </section> -->
   <section class="populaire">
     <div class="conteneur global">
@@ -81,28 +81,17 @@ get_header(); ?>
       
           ?>
 
-            <h2><?php the_title();
-            // affiche le titre principal de "post" ?></h2>
-            <p>
+          <h2><?php the_title();
+          // affiche le titre principal de "post" ?></h2>
 
-              <?php
-              if (in_category('galerie')) {
-                echo "<article class='conteneur__galerie'>";
-                the_content();
-                echo '</article>';
-              }else{    ?>      
-              <article class="conteneur__carte">
-            <?php
-            the_post_thumbnail('thumbnail'); ?>
-                        <h2><?php the_title();
-            // affiche le titre principal de "post" ?></h2><?php
-              $lien = "<a href=" . get_permalink() . ">Suite</a>"; //Sur WP tableau de bord > Réglages > Permaliens = "Nom de l'article" alors le lien est de la forme : https://www.monsite.com/nom-de-l-article/
-              echo wp_trim_words(get_the_excerpt(), 10, $lien);/**  */
-              //  the_excerpt() affiche un extrait des articles de la page d'accueil
-              }?>
-            </p>
-          </article>
+
           <?php
+          if (in_category('galerie')) {
+            get_template_part("gabarit/galerie");
+          } else {
+            get_template_part("gabarit/carte"); ?>
+
+            <?php
           }
         }
       } ?>
