@@ -269,7 +269,7 @@ body {
 .conteneur {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  justify-content: space-between;
 }
 .conteneur__carte {
   display: flex;
@@ -277,4 +277,7 @@ body {
   justify-content: space-between;
   flex: 1 0 300px;
   padding: 10px;
+}
+.conteneur__galerie {
+  flex: 1 0 100%;
 }/*# sourceMappingURL=style.css.map */

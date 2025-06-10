@@ -47,7 +47,6 @@ get_header(); ?>
       </div>
     </form>
   </section>
-  <!-- <section class="galerie">
     <h2 class="galerie__title">Découvrez nos meilleures destinations</h2>
     <div class="galerie__content">
       <picture class="galerie__picture"><img src="images/galerie/galerie (1).jpg" alt="1" class="galerie__img" />
@@ -81,25 +80,30 @@ get_header(); ?>
           // affiche l'image mise en avant de "post" miniature
       
           ?>
-          <article class="conteneur__carte">
-            <?php
-            the_post_thumbnail('thumbnail'); ?>
+
             <h2><?php the_title();
             // affiche le titre principal de "post" ?></h2>
             <p>
 
               <?php
               if (in_category('galerie')) {
+                echo "<article class='conteneur__galerie'>";
                 the_content();
-
-              }
+                echo '</article>';
+              }else{    ?>      
+              <article class="conteneur__carte">
+            <?php
+            the_post_thumbnail('thumbnail'); ?>
+                        <h2><?php the_title();
+            // affiche le titre principal de "post" ?></h2><?php
               $lien = "<a href=" . get_permalink() . ">Suite</a>"; //Sur WP tableau de bord > Réglages > Permaliens = "Nom de l'article" alors le lien est de la forme : https://www.monsite.com/nom-de-l-article/
               echo wp_trim_words(get_the_excerpt(), 10, $lien);/**  */
               //  the_excerpt() affiche un extrait des articles de la page d'accueil
-              ?>
+              }?>
             </p>
           </article>
           <?php
+          }
         }
       } ?>
     </div>
