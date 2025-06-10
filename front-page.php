@@ -88,11 +88,15 @@ get_header(); ?>
             // affiche le titre principal de "post" ?></h2>
             <p>
 
-              <?php //the_content();
-                  $lien = "<a href=" . get_permalink() . ">Suite</a>"; //Sur WP tableau de bord > Réglages > Permaliens = "Nom de l'article" alors le lien est de la forme : https://www.monsite.com/nom-de-l-article/
-                  echo wp_trim_words(get_the_excerpt(), 10, $lien);/**  */
-                  //  the_excerpt() affiche un extrait des articles de la page d'accueil
-                  ?>
+              <?php
+              if (in_category('galerie')) {
+                the_content();
+
+              }
+              $lien = "<a href=" . get_permalink() . ">Suite</a>"; //Sur WP tableau de bord > Réglages > Permaliens = "Nom de l'article" alors le lien est de la forme : https://www.monsite.com/nom-de-l-article/
+              echo wp_trim_words(get_the_excerpt(), 10, $lien);/**  */
+              //  the_excerpt() affiche un extrait des articles de la page d'accueil
+              ?>
             </p>
           </article>
           <?php
