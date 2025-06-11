@@ -47,30 +47,6 @@ get_header(); ?>
       </div>
     </form>
   </section>
-  <h2 class="galerie__title">Découvrez nos meilleures destinations</h2>
-  <div class="galerie__content">
-    <picture class="galerie__picture"><img src="images/galerie/galerie (1).jpg" alt="1" class="galerie__img" />
-    </picture>
-    <picture class="galerie__picture"><img src="images/galerie/galerie (2).jpg" alt="2" class="galerie__img" />
-    </picture>
-    <picture class="galerie__picture"><img src="images/galerie/galerie (3).jpg" alt="3" class="galerie__img" />
-    </picture>
-    <picture class="galerie__picture"><img src="images/galerie/galerie (4).jpg" alt="4" class="galerie__img" />
-    </picture>
-    <picture class="galerie__picture"><img src="images/galerie/galerie (5).jpg" alt="5" class="galerie__img" />
-    </picture>
-    <picture class="galerie__picture"><img src="images/galerie/galerie (6).jpg" alt="6" class="galerie__img" />
-    </picture>
-    <picture class="galerie__picture"><img src="images/galerie/galerie (7).jpg" alt="7" class="galerie__img" />
-    </picture>
-    <picture class="galerie__picture"><img src="images/galerie/galerie (8).jpg" alt="8" class="galerie__img" />
-    </picture>
-    <picture class="galerie__picture"><img src="images/galerie/galerie (9).jpg" alt="9" class="galerie__img" />
-    </picture>
-    <picture class="galerie__picture"><img src="images/galerie/galerie (10).jpg" alt="10" class="galerie__img" />
-    </picture>
-  </div>
-  </section> -->
   <section class="populaire">
     <div class="conteneur global">
       <?php
@@ -78,13 +54,9 @@ get_header(); ?>
         while (have_posts()) {
           the_post();
           // affiche l'image mise en avant de "post" miniature
-      
           ?>
-
           <h2><?php the_title();
           // affiche le titre principal de "post" ?></h2>
-
-
           <?php
           if (in_category('galerie')) {
             get_template_part("gabarit/galerie");

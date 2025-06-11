@@ -10,4 +10,4 @@ https://kho-mohamed.github.io/33w/
 
 #### Adress web serveur avec wordpress
 
-https://gftnth00.mywhc.ca/33we_11/
+https://gftnth00.mywhc.ca/33we_22/
