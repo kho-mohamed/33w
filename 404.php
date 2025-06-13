@@ -1,7 +1,6 @@
 <?php
 // Modèle index.php permet d'afficher le modèle par defaut.
 get_header(); ?>
-<h1>---ereur404.php</h1>
 <main>
 
   <section class="populaire">

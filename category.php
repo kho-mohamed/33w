@@ -1,7 +1,6 @@
 <?php
 // Modèle catégorie.php permet d'afficher 
 get_header(); ?>
-<h1>---catégorie.php</h1>
 <main>
 
   <section class="populaire">

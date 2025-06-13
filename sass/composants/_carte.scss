@@ -1,14 +1,33 @@
 .conteneur {
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
-  // gap: 25px;
+  gap: 10px;
   justify-content: space-between;
+  padding: 15px;
   &__carte {
     display: flex;
     flex-flow: column;
     justify-content: space-between;
-    flex: 1 0 300px;
-    padding: 10px;
+    align-items: center;
+    flex: 0 0 300px;
+    padding: 20px;
+    &__paragraphe {
+      margin-top: 5px;
+      font-size: 1em;
+    }
+    &__lien {
+      display: block;
+      margin-top: 5px;
+      font-size: 1em;
+      text-decoration: none;
+      color: inherit;
+      background-color: $couleur_secondaire;
+      padding: 5 5px;
+      width: 80px;
+      text-align: center;
+      border-radius: 5px;
+    }
   }
   &__galerie {
     flex: 1 0 100%;

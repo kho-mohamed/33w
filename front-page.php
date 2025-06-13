@@ -1,7 +1,6 @@
 <?php
 //le modèle front-page permet d'afficher la page d'accueil
 get_header(); ?>
-<h1>------------Front-page.php</h1>
 <main>
   <section class="hero">
     <div class="hero__content">
@@ -55,8 +54,6 @@ get_header(); ?>
           the_post();
           // affiche l'image mise en avant de "post" miniature
           ?>
-          <h2><?php the_title();
-          // affiche le titre principal de "post" ?></h2>
           <?php
           if (in_category('galerie')) {
             get_template_part("gabarit/galerie");

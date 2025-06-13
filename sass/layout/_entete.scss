@@ -29,7 +29,7 @@
     //li
     padding: 3px;
     border-radius: 5px;
-    a {
+    & a {
       text-decoration: none;
       color: $couleur_police_texte;
       display: block;
