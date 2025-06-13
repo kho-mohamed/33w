@@ -1,6 +1,7 @@
 <?php
-// Modèle index.php permet d'afficher le modèle par defaut.
+// Modèle search.php permet d'afficher le modèle par defaut.
 get_header(); ?>
+
 <main>
 
   <section class="populaire">
