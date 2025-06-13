@@ -1,5 +1,5 @@
 <?php
-// Modèle catégorie.php permet d'afficher 
+// Modèle ingle.php permet d'afficher le modèle par defaut.
 get_header(); ?>
 <main>
 

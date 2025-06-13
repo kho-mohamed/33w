@@ -3,7 +3,7 @@
 $lien = "<a class='conteneur__carte__lien' href=" . get_permalink() . ">Suite</a>"; //Sur WP tableau de bord > Réglages > Permaliens = "Nom de l'article" alors le lien est de la forme : https://www.monsite.com/nom-de-l-article/ ?>
 
 <article class="conteneur__carte">
-    <?php the_post_thumbnail('thumbnail'); ?>
+    <?php the_post_thumbnail('miniature'); ?>
     <h2><?php the_title(); // affiche le titre principal de "post" ?></h2>
     <p class="conteneur__conteneur__carte__paragraphe"><?php
     echo wp_trim_words(get_the_excerpt(), 10, $lien);

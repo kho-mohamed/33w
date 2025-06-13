@@ -21,7 +21,7 @@
                 <input type="checkbox" id="menu-toggle" class="entete_toggle" hidden />
                 <label for="menu-toggle" class="entete__toggle-icon">☰</label>
                 <?php wp_nav_menu(array(
-                    'menu' => 'menu_principal',
+                    'menu' => 'principal',
                     'container' => '',
                     'container_class' => '',
                     'menu_class' => 'entete__menu'

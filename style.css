@@ -236,6 +236,59 @@ body {
   padding: 10px;
   text-align: center;
 }
+.piedpage__bloc {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+.piedpage__ligne-1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.piedpage____adresse {
+  flex-grow: 2;
+  font-size: 0.8em !important;
+}
+.piedpage__description {
+  font-size: 0.8em;
+  max-width: 200px;
+}
+.piedpage form {
+  border: none;
+  width: 100%;
+}
+.piedpage input {
+  width: 100%;
+}
+.piedpage label {
+  width: 100%;
+  height: 40px;
+}
+.piedpage__bouton {
+  height: 40px;
+}
+
+[id=menu-externe] {
+  list-style: none;
+}
+[id=menu-externe] a {
+  color: #09bddd;
+  text-decoration: none;
+}
+
+.categorie {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  padding: 20px;
+}
+.categorie__carte {
+  background-color: #f3f1f1;
+  padding: 20px;
+  border-radius: 10px;
+}
 
 /* ///////////////////////////////////  composants */
 /**
