@@ -132,6 +132,11 @@ body {
   }
 }
 
+.custom-logo {
+  width: 75px;
+  height: 75px;
+}
+
 .hero {
   background-image: url("images/acores.jpg");
   background-position: center;
