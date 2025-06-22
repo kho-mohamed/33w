@@ -4,12 +4,13 @@ get_header(); ?>
 <main>
   <section class="hero">
     <div class="hero__content">
-      <h1 class="hero__titre">Voyagez Autrement avec Club de Voyage !</h1>
+      <h1 class="hero__titre"><?php bloginfo('name') ?></h1>
       <p class="hero__description">
-        Découvrez des destinations inoubliables avec Club de Voyage. Nous
+        <!-- Découvrez des destinations inoubliables avec Club de Voyage. Nous
         vous offrons des expériences uniques, des séjours authentiques et
         des paysages à couper le souffle. Partez à la découverte du monde
-        avec nous et créez des souvenirs impérissables.
+        avec nous et créez des souvenirs impérissables. -->
+        <?php bloginfo('description') ?>
       </p>
       <div class="hero__contact">
         <a href="mailto:info@clubdevoyage.ca">info@clubdevoyage.ca</a>
