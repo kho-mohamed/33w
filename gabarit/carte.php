@@ -9,7 +9,15 @@ $lien = "<a class='conteneur__carte__lien' href=" . get_permalink() . ">Suite</a
     //  the_excerpt() affiche un extrait des articles de la page d'accueil
     ?>
     </p>
-    <small>Température minimum : <?php the_field('temperature_minimum'); ?>&deg;C.</small>
-    <small>Température minimum : <?php the_field('temperature_minimum'); ?>&deg;C.</small>
-    <small>Température moyenne : <?php the_field('temperature_moyenne'); ?>&deg;C.</small>
+    <div class="conteneur__info">
+        <div class="conteneur__temp"> <small class="conteneur__temp-max">Temp Max :
+                <?php the_field('temperature_maximum'); ?>&deg;C.</small>
+            <small class="conteneur__temp-min">Temp Min : <?php the_field('temperature_minimum'); ?>&deg;C.</small>
+            <small class="conteneur__temp-moyen">Temp Moyenne :
+                <?php the_field('temperature_moyenne'); ?>&deg;C.</small>
+        </div>
+        <div><?php the_category(); ?></div>
+    </div>
+
+
 </article>

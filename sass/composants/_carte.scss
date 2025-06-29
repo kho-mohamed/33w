@@ -12,24 +12,74 @@
     align-items: center;
     flex: 0 0 300px;
     padding: 20px;
+    & img {
+      border-radius: 5px;
+      border: 1px solid $couleur_tertiaire;
+      margin-bottom: 10px;
+    }
     &__paragraphe {
       margin-top: 5px;
       font-size: 1em;
     }
     &__lien {
       display: block;
-      margin-top: 5px;
-      font-size: 1em;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 0.8em;
       text-decoration: none;
       color: inherit;
-      background-color: $couleur_secondaire;
+      background-color: $couleur_tertiaire;
       padding: 5 5px;
       width: 80px;
       text-align: center;
       border-radius: 5px;
     }
   }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    margin-top: 5px;
+  }
+  &__temp {
+    display: flex;
+    flex-flow: column;
+    gap: 3px;
+    justify-content: start;
+    font-size: 0.8em;
+  }
+  &__temp-max {
+    color: $couleur_rouge;
+  }
+  &__temp-min {
+    color: $couleur_bleu;
+  }
+  &__temp-moyen {
+    color: $couleur_orange;
+  }
   &__galerie {
     flex: 1 0 100%;
+  }
+}
+
+.post-categories {
+  list-style: none;
+  gap: 5px;
+  display: flex;
+  flex-flow: column;
+  & li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 0.8em;
+    & a {
+      text-decoration: none;
+      color: $couleur_primaire;
+      background-color: $couleur_police_texte;
+      padding: 2px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }

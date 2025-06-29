@@ -4,6 +4,7 @@ get_header(); ?>
 <main>
 
   <section class="categorie">
+
     <?php
     if (have_posts()) {
       while (have_posts()) {
