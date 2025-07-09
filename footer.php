@@ -1,4 +1,7 @@
-<footer class="piedpage">
+<?php
+$footer_couleur = "#a9a9a9";
+vague("#fffff", $footer_couleur); ?>
+<footer class="piedpage" style="background-color: <?= $footer_couleur ?> ;">
     <div class="global piedpage__bloc">
         <section class="piedpage__ligne-1">
             <div class="piedpage__lien">
@@ -20,11 +23,10 @@
         </section>
         <section class="piedpage__ligne-2">
             <div class="piedpage__icone">
-                <div class="piedpage__icone"> <a href="#" class="socieaux"><img
-                            src="https://s2.svgbox.net/materialui.svg?ic=facebook&color=000" width="32"
-                            height="32" /></a>
-                    <a href="#" class="sociaux"><img src="https://s2.svgbox.net/social.svg?ic=instagram&color=000"
-                            width="32" height="32" /></a>
+                <div class="piedpage__icone">
+
+                    <?php icone_sociaux('#000000') ?>
+
                 </div>
             </div>
         </section>

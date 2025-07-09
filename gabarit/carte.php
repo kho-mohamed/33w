@@ -16,6 +16,9 @@ $lien = "<a class='conteneur__carte__lien' href=" . get_permalink() . ">Suite</a
             <small class="conteneur__temp-moyen">Temp Moyenne :
                 <?php the_field('temperature_moyenne'); ?>&deg;C.</small>
         </div>
+        <p class="conteneur__carte__note">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/etoile.png" alt="Note Client">Note client :
+            <?php the_field('note_client'); ?>
         <div><?php the_category(); ?></div>
     </div>
 
