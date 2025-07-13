@@ -35,7 +35,8 @@ function club_voyage_customize_register($wp_customize)
         'section' => 'hero_section',
         'type' => 'text',
     ));
-    ////////////////////// image
+    ////////////////////// Images du carrousel
+    // Image 1
     /* créer le champ */
     $wp_customize->add_setting('hero_background_0', array(
         'default' => '',
@@ -43,10 +44,11 @@ function club_voyage_customize_register($wp_customize)
     ));
     /* créer le contrôleur */
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_0', array(
-        'label' => __('Image en arrière plan', 'theme_31w'),
+        'label' => __('Image 1 du carrousel', 'theme_31w'),
         'section' => 'hero_section',
     )));
-    // image 1
+
+    // Image 2
     /* créer le champ */
     $wp_customize->add_setting('hero_background_1', array(
         'default' => '',
@@ -54,10 +56,11 @@ function club_voyage_customize_register($wp_customize)
     ));
     /* créer le contrôleur */
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_1', array(
-        'label' => __('Image en arrière plan', 'theme_31w'),
+        'label' => __('Image 2 du carrousel', 'theme_31w'),
         'section' => 'hero_section',
     )));
-    // image 2
+
+    // Image 3
     /* créer le champ */
     $wp_customize->add_setting('hero_background_2', array(
         'default' => '',
@@ -65,37 +68,15 @@ function club_voyage_customize_register($wp_customize)
     ));
     /* créer le contrôleur */
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_2', array(
-        'label' => __('Image en arrière plan', 'theme_31w'),
-        'section' => 'hero_section',
-    )));
-    // image 1
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_1', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_1', array(
-        'label' => __('Image en arrière plan', 'theme_31w'),
-        'section' => 'hero_section',
-    )));
-    // image 2
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_2', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_2', array(
-        'label' => __('Image en arrière plan', 'theme_31w'),
+        'label' => __('Image 3 du carrousel', 'theme_31w'),
         'section' => 'hero_section',
     )));
     /////////////////// couleur du texte de la section hero
     ////////////////////// champ couleur
     /* créer le champ */
     $wp_customize->add_setting('hero_couleur', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
+        'default' => '#000000',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
     /* créer le contrôleur */
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'hero_couleur', array(
@@ -114,8 +95,8 @@ function club_voyage_customize_register($wp_customize)
     ////////////////////// champ couleur
     /* créer le champ */
     $wp_customize->add_setting('footer_couleur', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
+        'default' => '#000000',
+        'sanitize_callback' => 'sanitize_hex_color',
     ));
     /* créer le contrôleur */
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'footer_couleur', array(
