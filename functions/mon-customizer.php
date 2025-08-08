@@ -36,6 +36,7 @@ function club_voyage_customize_register($wp_customize)
         'type' => 'text',
     ));
     ////////////////////// Images du carrousel
+    /// on va créer une boucle de plusieurs images
     // Image 1
     /* créer le champ */
     $wp_customize->add_setting('hero_background_0', array(

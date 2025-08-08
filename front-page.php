@@ -3,7 +3,9 @@
 get_header(); ?>
 <main>
   <section class="hero">
+
     <?php
+    // il faut faire une boucle ici pour récupérer les images du carrousel
     $hero_background[0] = get_theme_mod("hero_background_0");
     $hero_background[1] = get_theme_mod("hero_background_1");
     $hero_background[2] = get_theme_mod("hero_background_2");
@@ -27,6 +29,15 @@ get_header(); ?>
   </section>
   <section class="populaire">
     <?php get_template_part("gabarit/populaire"); ?>
+  </section>
+  <!-- section rest-api -->
+  <section class="destination">
+    <ul class="list_categories">
+      <li data-id="4">Aventure</li>
+      <li data-id="3">Culturel</li>
+    </ul>
+    <h2 class="destination__titre">Articles de la catégorie</h2>
+    <div class="destination__list"></div>
   </section>
 </main>
 
