@@ -6,10 +6,14 @@
 
 #### Collège : MAISONNEUVE
 
-#### Adresse de la github-page
+#### Lien du dépôt GitHub
 
-<!-- https://kho-mohamed.github.io/33w/ ça marche plus -->
+https://github.com/kho-mohamed/33w
 
 #### Adress web serveur avec wordpress
 
 https://gftnth00.mywhc.ca/33we_22/
+
+#### Description:
+
+Ce projet est un thème WordPress personnalisé pour un site de voyage, conçu pour présenter des destinations, des catégories et des fonctionnalités interactives adaptées aux besoins d'un club de voyage.
