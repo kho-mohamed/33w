@@ -74,7 +74,7 @@ function club_voyage_customize_register($wp_customize)
     ));
     ///////////////////////// Couleur du text de erreur 404
     $wp_customize->add_setting('404_couleur', array(
-        'default' => '#c68c0dff',
+        'default' => '#eda50bff',
         'sanitize_callback' => 'sanitize_hex_color',
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_couleur', array(
@@ -105,11 +105,33 @@ function club_voyage_customize_register($wp_customize)
 
     //////////////////////// couleur d'arrière plan du texte 404
     $wp_customize->add_setting('404_bg_couleur', array(
-        'default' => '#ffffff',
-        'sanitize_callback' => 'sanitize_hex_color',
+        'default' => 'rgba(255, 255, 255, 0.2)',
+        'sanitize_callback' => 'sanitize_text_field', // Permet de stocker rgba
     ));
     $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_bg_couleur', array(
         'label' => __('Couleur d\'arrière plan', 'club-voyagoo'),
+        'section' => '404_section',
+        'alpha' => true, // Permet la sélection de l'opacité si supporté
+    )));
+
+    //////////////////////Couleur d'arrière plan du boutton
+    $wp_customize->add_setting('404_button_bg_couleur', array(
+        'default' => '#ffdf43',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_button_bg_couleur', array(
+        'label' => __('Couleur d\'arrière plan du bouton', 'club-voyagoo'),
+        'section' => '404_section',
+        'alpha' => true, // Permet la sélection de l'opacité si supporté
+    )));
+
+    //////////////////////Couleur d'arrière plan de la zone de recherche
+    $wp_customize->add_setting('404_search_bg_couleur', array(
+        'default' => 'rgba(255, 255, 255, 0.1)',
+        'sanitize_callback' => 'sanitize_text_field', // Permet de stocker rgba
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_search_bg_couleur', array(
+        'label' => __('Couleur d\'arrière plan de la zone de recherche', 'club-voyagoo'),
         'section' => '404_section',
     )));
 

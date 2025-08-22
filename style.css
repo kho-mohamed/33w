@@ -304,6 +304,127 @@ body {
   max-width: 600px;
 }
 
+.erreur-404__background {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Titre principal */
+.erreur-404__titre h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Message */
+.erreur-404__message {
+  max-width: 600px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+/* Bouton retour accueil */
+.erreur-404__button a {
+  color: #727476;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.erreur-404__button a:hover {
+  transform: scale(1.05);
+}
+
+/* Liens de redirection (destinations) */
+.erreur-404__lien {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.erreur-404__lien nav a {
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.erreur-404__lien nav a:hover {
+  background-color: #ffe766;
+}
+
+/* Champ de recherche */
+.erreur-404__recherche form {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.erreur-404__recherche input[type=search] {
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 2px solid #ffdf43;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  width: 250px;
+  text-align: center;
+}
+
+/* Responsive tablette */
+@media (max-width: 992px) {
+  .erreur-404__titre h1 {
+    font-size: 2.5rem;
+  }
+  .erreur-404__message {
+    font-size: 1rem;
+  }
+  .erreur-404__recherche input[type=search] {
+    width: 80%;
+  }
+}
+/* Responsive mobile */
+@media (max-width: 600px) {
+  .erreur-404__background {
+    padding: 60px 15px;
+  }
+  .erreur-404__titre h1 {
+    font-size: 2rem;
+  }
+  .erreur-404__message {
+    font-size: 0.95rem;
+  }
+  .erreur-404__button a {
+    width: 100%;
+    max-width: 300px;
+  }
+  .erreur-404__lien {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .erreur-404__lien nav a {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+  .erreur-404__recherche input[type=search] {
+    width: 100%;
+    max-width: 250px;
+  }
+}
 /* ///////////////////////////////////  composants */
 /**
 ///////////Composant .recherche
