@@ -18,14 +18,14 @@ $erreur_404_couleur_search = get_theme_mod('404_search_couleur', 'rgba(255, 255,
     <div class="button erreur-404__button" style="background-color: <?= $erreur_404_couleur_bouton ?>;"><a
             href="<?= home_url(); ?>"><?= __('Retour à l\'accueil', 'club-voyagoo') ?></a>
     </div>
-    <div class="erreur-404__lien-Conteneur">
-        <div class="erreur-404__lien" style="background-color: <?= $erreur_404_couleur_bouton ?>;">
-            <?php wp_nav_menu(array(
-                "menu" => "selection",
-                "container" => "nav"
-            )) ?>
-        </div>
+
+    <div class="erreur-404__lien">
+        <?php wp_nav_menu(array(
+            "menu" => "selection",
+            "container" => "nav"
+        )) ?>
     </div>
+
 
     <div class="erreur-404__recherche" style="background-color: <?= $erreur_404_couleur_search ?>;">
         <?php get_search_form() ?>
