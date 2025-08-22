@@ -30,9 +30,11 @@ Text Domain: club-voyage
 @import "layout/categorie";
 @import "layout/erreur-404";
 
-  /* ///////////////////////////////////  composants */ @import
-  "composants/recherche";
+/* ///////////////////////////////////  composants */
+@import "composants/recherche";
 @import "composants/button";
-// @import "composants/menu";
+@import "composants/carrousel";
 @import "composants/carte";
 @import "composants/accordeon";
+@import "composants/populaire";
+@import "composants/destination";

@@ -1,5 +1,6 @@
 <div class="conteneur global">
     <?php
+    require_once get_template_directory() . '/functions/carte_a_retirer.php';
     if (have_posts()) {
         while (have_posts()) {
             the_post();
@@ -15,4 +16,6 @@
             }
         }
     } ?>
+
+    <section class="populaire__destination"><?= carte('Populaire'); ?></section>
 </div>

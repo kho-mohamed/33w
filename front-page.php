@@ -1,6 +1,8 @@
 <?php
 //le modèle front-page permet d'afficher la page d'accueil
-get_header(); ?>
+get_header();
+
+?>
 <main>
   <section class="hero">
 
@@ -14,13 +16,17 @@ get_header(); ?>
   <section class="populaire">
     <?php get_template_part("gabarit/populaire"); ?>
   </section>
+
+
   <!-- section rest-api -->
-  <section class="destination">
+  <section class="destination accordeon">
 
     <?php extraire_list_categories('destination'); ?>
     <h2 class="destination__titre">Articles de la catégorie</h2>
     <div class="destination__list"></div>
   </section>
+
+
 </main>
 
 <?php get_footer();

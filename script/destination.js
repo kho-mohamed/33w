@@ -24,7 +24,11 @@
         data.forEach((article) => {
           const articleElement = document.createElement("div");
           articleElement.innerHTML = `
-          <label class="accordeon" for="accordeon__chk__${article.id}"><h3>${article.title.rendered}</h3></label>
+          <label class="accordeon" for="accordeon__chk__${article.id}"><h3>${article.title.rendered}              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 24 24">
+  <circle cx="12" cy="5" r="2"/>
+  <circle cx="12" cy="12" r="2"/>
+  <circle cx="12" cy="19" r="2"/>
+</svg></h3></label>
           <input type="checkbox" class="accordeon__chk" id="accordeon__chk__${article.id}">
           <div class="accordeon__excerpt">${article.excerpt.rendered} <a href="${article.link}">Lire plus</a></div>
           

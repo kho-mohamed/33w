@@ -1,4 +1,5 @@
 .accordeon {
+  cursor: pointer;
   &__chk {
     display: none;
   }
@@ -6,6 +7,15 @@
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
+  }
+  & h3 {
+    text-align: center;
+  }
+  & a {
+    display: inline-block;
+    background-color: $couleur_orange;
+    padding: 5px;
+    border-radius: 5px;
   }
 }
 // input checkbox: accordéon
