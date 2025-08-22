@@ -36,9 +36,32 @@ function club_voyage_customize_register($wp_customize)
         'type' => 'text',
     ));
     ////////////////////// Images du carrousel
-    /// on va créer une boucle de plusieurs images
+    /// on va créer une boucle de plusieurs images selon le choix de l'utilisateur
+
+    //////// ajout du nombre des images :
+    $wp_customize->add_setting('hero_background_count', array(
+        'default' => 3,
+        'sanitize_callback' => 'absint',
+        'transport' => 'refresh',
+    ));
+
+    $wp_customize->add_control('hero_background_count', array(
+        'label' => __('Nombre d’images du carrousel', 'club-voyage'),
+        'section' => 'hero_section',
+        'type' => 'number',
+        'input_attrs' => array(
+            'min' => 1,
+            'max' => 10,
+            'step' => 1,
+        ),
+    ));
+    ///// on crée le réglage qui donne accès aux images de fond dans menu selon nombre d'image 
+
+    // Obtenir le nombre d'images sélectionnées par l'utilisateur (par défaut 3)
+    $number_of_images = get_theme_mod('hero_background_count', 3);
+
     // Boucle pour ajouter plusieurs images dans le customizer
-    for ($i = 0; $i < 5; $i++) {
+    for ($i = 0; $i < $number_of_images; $i++) {
         $setting_id = 'hero_background_' . $i;
         $label = sprintf(__('Image %d du carrousel', 'theme_31w'), $i + 1);
 
