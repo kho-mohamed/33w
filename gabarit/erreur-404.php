@@ -21,5 +21,7 @@ $erreur_404_bg_couleur = get_theme_mod('404_bg_couleur', '#ffffff');
             "container" => "nav"
         )) ?>
     </div>
-
+    <div class="erreur-404__recherche">
+        <?php get_search_form() ?>
+    </div>
 </div>
