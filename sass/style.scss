@@ -28,9 +28,11 @@ Text Domain: club-voyage
 @import "layout/galerie";
 @import "layout/piedpage";
 @import "layout/categorie";
+@import "layout/erreur-404";
 
-/* ///////////////////////////////////  composants */
-@import "composants/recherche";
+  /* ///////////////////////////////////  composants */ @import
+  "composants/recherche";
 @import "composants/button";
 // @import "composants/menu";
 @import "composants/carte";
+@import "composants/accordeon";

@@ -4,7 +4,8 @@ get_header(); ?>
 <main>
 
   <section class="populaire">
-    <?php get_template_part("gabarit/erreur-404"); ?>
+    <h1>Erreur 404!</h1>
+    <h2>L'adresse que vous demandé n'existe pas</h2>
   </section>
 </main>
 

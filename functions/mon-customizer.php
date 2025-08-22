@@ -8,7 +8,7 @@ function club_voyage_customize_register($wp_customize)
 {
     // Le code pour ajouter des sections, des réglages et des contrôles ira ici.
     $wp_customize->add_section('hero_section', array(
-        'title' => __('Section Héro - Accueil', 'club-voyagoo'),
+        'title' => __('Section Hero - Accueil', 'club-voyagoo'),
         'priority' => 30,
     ));
     //////////////////////  Auteur
@@ -37,41 +37,24 @@ function club_voyage_customize_register($wp_customize)
     ));
     ////////////////////// Images du carrousel
     /// on va créer une boucle de plusieurs images
-    // Image 1
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_0', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_0', array(
-        'label' => __('Image 1 du carrousel', 'theme_31w'),
-        'section' => 'hero_section',
-    )));
+    // Boucle pour ajouter plusieurs images dans le customizer
+    for ($i = 0; $i < 5; $i++) {
+        $setting_id = 'hero_background_' . $i;
+        $label = sprintf(__('Image %d du carrousel', 'theme_31w'), $i + 1);
 
-    // Image 2
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_1', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_1', array(
-        'label' => __('Image 2 du carrousel', 'theme_31w'),
-        'section' => 'hero_section',
-    )));
+        // Ajouter le champ (setting)
+        $wp_customize->add_setting($setting_id, array(
+            'default' => '',
+            'sanitize_callback' => 'esc_url_raw',
+        ));
 
-    // Image 3
-    /* créer le champ */
-    $wp_customize->add_setting('hero_background_2', array(
-        'default' => '',
-        'sanitize_callback' => 'esc_url_raw',
-    ));
-    /* créer le contrôleur */
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_background_2', array(
-        'label' => __('Image 3 du carrousel', 'theme_31w'),
-        'section' => 'hero_section',
-    )));
+        // Ajouter le contrôleur (control)
+        $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, $setting_id, array(
+            'label' => $label,
+            'section' => 'hero_section',
+            'settings' => $setting_id,
+        )));
+    }
     /////////////////// couleur du texte de la section hero
     ////////////////////// champ couleur
     /* créer le champ */
@@ -84,13 +67,68 @@ function club_voyage_customize_register($wp_customize)
         'label' => __('Couleur du texte', 'club-voyagoo'),
         'section' => 'hero_section',
     )));
+    /////////////////////////Ajout du panneau "erreur 404"
+    $wp_customize->add_section('404_section', array(
+        'title' => __('Section Erreur 404', 'club-voyagoo'),
+        'priority' => 30,
+    ));
+    ///////////////////////// Couleur du text de erreur 404
+    $wp_customize->add_setting('404_couleur', array(
+        'default' => '#c68c0dff',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_couleur', array(
+        'label' => __('Couleur du texte', 'club-voyagoo'),
+        'section' => '404_section',
+    )));
 
+    /////////////////////// Ajouter réglage de titre erreur 404
+    $wp_customize->add_setting('404_titre', array(
+        'default' => __('Erreur 404 - Page non trouvée', 'club-voyagoo'),
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    $wp_customize->add_control('404_titre', array(
+        'label' => __('Titre de la page 404', 'club-voyagoo'),
+        'section' => '404_section',
+        'type' => 'text',
+    ));
+    ////////////////////// Ajouter réglage message d'erreur 404
+    $wp_customize->add_setting('404_message', array(
+        'default' => __('Désolé, la page que vous recherchez est introuvable.', 'club-voyagoo'),
+        'sanitize_callback' => 'sanitize_textarea_field',
+    ));
+    $wp_customize->add_control('404_message', array(
+        'label' => __('Message d\'erreur 404', 'club-voyagoo'),
+        'section' => '404_section',
+        'type' => 'textarea',
+    ));
+
+    //////////////////////// couleur d'arrière plan du texte 404
+    $wp_customize->add_setting('404_bg_couleur', array(
+        'default' => '#ffffff',
+        'sanitize_callback' => 'sanitize_hex_color',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, '404_bg_couleur', array(
+        'label' => __('Couleur d\'arrière plan', 'club-voyagoo'),
+        'section' => '404_section',
+    )));
+
+    ///////////////////////// Ajout d'image d'arrière plan:
+    $wp_customize->add_setting('404_bg_image', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, '404_bg_image', array(
+        'label' => __('Image d\'arrière plan', 'club-voyagoo'),
+        'section' => '404_section',
+    )));
 
     ///////////////////////// Ajout du panneau « pied de page »
     $wp_customize->add_section('footer_section', array(
         'title' => __('Section pied de page', 'club-voyage'),
         'priority' => 30,
     ));
+
 
     /////////////////// couleur du texte du footer
     ////////////////////// champ couleur
@@ -104,6 +142,7 @@ function club_voyage_customize_register($wp_customize)
         'label' => __('Couleur du texte', 'club-voyage'),
         'section' => 'footer_section',
     )));
+
 }
 
 add_action('customize_register', 'club_voyage_customize_register');
