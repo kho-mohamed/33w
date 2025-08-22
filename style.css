@@ -316,6 +316,10 @@ body {
 }
 
 /* Titre principal */
+.erreur-404__titre {
+  border-radius: 5px;
+  padding: 10px;
+}
 .erreur-404__titre h1 {
   font-size: 3.5rem;
   font-weight: 700;
@@ -327,6 +331,9 @@ body {
   max-width: 600px;
   margin-bottom: 30px;
   font-size: 1.1rem;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 700;
 }
 
 /* Bouton retour accueil */
@@ -379,6 +386,7 @@ body {
 
 /* Champ de recherche */
 .erreur-404__recherche form {
+  border: none;
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -387,7 +395,7 @@ body {
   display: none;
 }
 
-.erreur-404__recherche input {
+.erreur-404__recherche input[type=search] {
   padding: 10px 20px;
   border: none;
   border-bottom: 2px solid #ffdf43;
@@ -398,8 +406,10 @@ body {
   width: 250px;
   text-align: center;
 }
-.erreur-404__recherche input::placeholder {
+.erreur-404__recherche input[type=search]::placeholder {
   color: #ffdf43;
+  text-align: left;
+  font-size: 1.3em;
 }
 
 /* Responsive tablette */

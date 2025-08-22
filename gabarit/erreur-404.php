@@ -27,7 +27,7 @@ $erreur_404_couleur_search = get_theme_mod('404_search_couleur', 'rgba(255, 255,
     </div>
 
 
-    <div class="erreur-404__recherche" style="background-color: <?= $erreur_404_couleur_search ?>;">
+    <div class="erreur-404__recherche">
         <?php get_search_form() ?>
     </div>
 </div>

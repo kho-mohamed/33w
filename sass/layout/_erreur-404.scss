@@ -10,10 +10,15 @@
 }
 
 /* Titre principal */
-.erreur-404__titre h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
+.erreur-404__titre {
+  border-radius: 5px;
+  padding: 10px;
+
+  & h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
 }
 
 /* Message */
@@ -21,6 +26,9 @@
   max-width: 600px;
   margin-bottom: 30px;
   font-size: 1.1rem;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 700;
 }
 
 /* Bouton retour accueil */
@@ -74,6 +82,7 @@
 
 /* Champ de recherche */
 .erreur-404__recherche form {
+  border: none;
   display: flex;
   justify-content: center;
   margin-top: 10px;
@@ -83,7 +92,7 @@
   }
 }
 
-.erreur-404__recherche input {
+.erreur-404__recherche input[type="search"] {
   padding: 10px 20px;
   border: none;
   border-bottom: 2px solid #ffdf43;
@@ -95,6 +104,8 @@
   text-align: center;
   &::placeholder {
     color: #ffdf43;
+    text-align: left;
+    font-size: 1.3em;
   }
 }
 
