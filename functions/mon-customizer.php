@@ -188,6 +188,25 @@ function club_voyage_customize_register($wp_customize)
         'section' => 'footer_section',
     )));
 
+    ////////////////////// Image footer
+    /* créer le champ */
+    $wp_customize->add_setting('footer_image', array(
+        'default' => '',
+        'sanitize_callback' => 'esc_url_raw',
+    ));
+    /* créer le contrôleur */
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'footer_image_control', array(
+        'label' => __('Image du footer', 'club-voyage'),
+        'section' => 'footer_section',
+        'settings' => 'footer_image',
+    )));
+
+    // Section Images par defaut
+    $wp_customize->add_section('default_images_section', array(
+        'title' => __('Images par défaut', 'ton-theme'),
+        'priority' => 30,
+    ));
+
 }
 
 add_action('customize_register', 'club_voyage_customize_register');

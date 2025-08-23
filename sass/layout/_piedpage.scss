@@ -2,6 +2,18 @@
   background-color: $couleur_primaire;
   padding: 10px;
   text-align: center;
+  &__navigation #menu-principal-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    & li {
+      list-style: none;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: $couleur_tertiaire;
+    }
+  }
   &__bloc {
     display: flex;
     flex-flow: column;
@@ -23,14 +35,34 @@
     font-size: 0.8em;
     max-width: 200px;
   }
+
+  &__ligne-2 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
   // &__recherche {
   // }
   & form {
     border: none;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
   }
   & input {
     width: 100%;
+    height: 100%;
+    background-color: $couleur_tertiaire;
+    border-radius: 10px;
+    padding: 0 20px;
+
+    &::placeholder {
+      color: $couleur_police_titre;
+    }
   }
   & label {
     width: 100%;
@@ -38,6 +70,10 @@
   }
   &__bouton {
     height: 40px;
+    border-radius: 10px;
+  }
+  & .recherche__bouton {
+    padding: 5px;
   }
 }
 [id="menu-externe"] {
@@ -46,4 +82,7 @@
     color: $couleur_tertiaire;
     text-decoration: none;
   }
+}
+.footer-image img {
+  border-radius: 50%;
 }

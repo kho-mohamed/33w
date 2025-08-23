@@ -14,6 +14,14 @@ vague("#fffff", $footer_couleur); ?>
                 <h4>Adresse et recherche</h4>
                 <span>adresse : 698 rue notre dame montreal</span>
                 <div class="piedpage__recherche"><?php get_search_form() ?></div>
+                <?php
+                $footer_image = get_theme_mod('footer_image');
+                if ($footer_image): ?>
+                    <div class="footer-image" style="max-width: 300px; margin: 0 auto;">
+                        <img src="<?php echo esc_url($footer_image); ?>" alt="Footer Image"
+                            style="width: 100%; height: auto;">
+                    </div>
+                <?php endif; ?>
             </div>
 
             <div class="piedpage__description">Notre mission est d'inspirer et d'informer nos membres sur des
@@ -28,6 +36,12 @@ vague("#fffff", $footer_couleur); ?>
                     <?php icone_sociaux('#000000') ?>
 
                 </div>
+            </div>
+            <div class="piedpage__navigation">
+                <?php wp_nav_menu(array(
+                    "menu" => "principal",
+                    "container" => "nav"
+                )) ?>
             </div>
         </section>
 
