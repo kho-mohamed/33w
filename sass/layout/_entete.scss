@@ -17,26 +17,28 @@
   }
   /* ///////////////////navigation  */
   &__nav {
-    margin: 0 0 0 auto;
+    margin: 0 10px 0 auto;
   }
   &__menu {
     //ul
     display: flex;
     list-style-type: none;
     gap: 1rem;
-  }
-  &__menu-item {
-    //li
-    padding: 3px;
-    border-radius: 5px;
+
     & a {
       text-decoration: none;
       color: $couleur_police_texte;
+      background-color: $couleur_tertiaire;
       display: block;
       padding: 3px;
       border-radius: 5px;
       &:hover {
         background-color: $couleur_secondaire;
+      }
+      & li {
+        //li
+        padding: 3px;
+        border-radius: 5px;
       }
     }
   }
